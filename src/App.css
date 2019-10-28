@@ -1,22 +1,61 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 754px;
+  height: 1628px;
+  margin: auto;
+  background-color: #363845;
   color: white;
+  padding-top: 58px;
 }
 
-.App-link {
-  color: #09d3ac;
+i {
+  font-size: 46px;
+  margin-bottom: 30px;
+}
+
+.card {
+  width: 686px;
+  height: 248px;
+  background-color: #41414d;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  margin-bottom: 28px;
+}
+
+.block {
+  height: 120px;
+}
+
+hr {
+  background-color: #484854;
+  border: 1px solid  #484854;
+  width: 609px;
+}
+
+label {
+  color: #96969e;
+  font-size: 28px;
+}
+
+.toal-balance {
+  font-size: 63px;
+  margin-bottom: 26px;
+}
+
+.changes {
+  font-size: 28px;
+  color: #0fdb86;
+  margin-bottom: 49px;
+  margin-top: 10px;
+}
+
+.currency-page {
+  text-align: center;
+  width: 754px;
+  height: 1628px;
+  margin: auto;
+  background-color: #363845;
+  color: white;
+  padding-top: 58px;
 }
