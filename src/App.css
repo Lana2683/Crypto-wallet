@@ -3,20 +3,23 @@
   width: 754px;
   height: 1628px;
   margin: auto;
-  background-color: #363845;
+  background: linear-gradient(-45deg, #1f1f2b, #434552);
   color: white;
   padding-top: 58px;
 }
 
-i {
-  font-size: 46px;
-  margin-bottom: 30px;
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 616px;
+  margin: auto;
+  margin-bottom: 40px;
 }
 
 .card {
   width: 686px;
   height: 248px;
-  background-color: #41414d;
+  background: linear-gradient(-45deg, #3b3b47, #444351);
   margin: auto;
   border-radius: 8px;
   box-shadow: 0 0 3px rgba(0,0,0,0.2);
@@ -25,6 +28,32 @@ i {
 
 .block {
   height: 120px;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inline-block {
+  display: flex;
+}
+
+.random {
+  padding: 38px 39px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.profit-loss {
+  padding: 20px 39px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
 }
 
 hr {
@@ -33,9 +62,32 @@ hr {
   width: 609px;
 }
 
-label {
+.svg {
+  padding: 19px 27px 0px 39px
+}
+
+.currency-name{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 38px;
+}
+
+.currency-price {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 18px 0px 32px 39px; 
+}
+
+.label-total-balance {
   color: #96969e;
   font-size: 28px;
+}
+
+.label-link {
+  color: #96969e;
+  font-size: 20px;
 }
 
 .toal-balance {

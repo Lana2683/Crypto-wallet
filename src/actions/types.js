@@ -1,0 +1,1 @@
+export const GET_ETHUSD = 'GET_ETHUSD';

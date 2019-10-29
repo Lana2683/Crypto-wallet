@@ -1,33 +1,41 @@
 import React, { Component } from 'react';
 import Currency from './Currency';
 import Amound from './Amount';
-import { Consumer } from '../context';
+import { connect } from 'react-redux';
+import { getEthUsd } from '../actions/currencyAction';
+import Search from '../SVG/Search';
+import Bell from '../SVG/Bell';
+
 
  class Currencies extends Component {
+    componentWillMount() {
+        this.props.getEthUsd();
+    };
     render() {
+        const { currencies } = this.props
         return ( 
-        
-            <Consumer>
-                {value => {
-                    const { currencies } = value;
-                    return(
-                    <React.Fragment>
-                        <i className="fas fa-search"></i>
-        <i className="far fa-bell"></i>
-        <Amound />
-                        {currencies.map(currency => (
-                            <Currency
-                            key={currency.id}
-                            currency={currency}
-                            />
-                        ))}
-                    </React.Fragment>
-                    )
-                }}
-            </Consumer>
+            <React.Fragment>
+                <div className='icons'>
+                    <Search />
+                    <Bell />
+                </div>
+                <Amound />
+                {currencies.map(currency => (
+                    <Currency
+                    key={currency.id}
+                    currency={currency}
+                    updateData={this.updateData}
+                    />
+                ))}
+            </React.Fragment>
+                 
         )
         
     }
 }
 
-export default Currencies;
+const mapStateToProps = (state) => ({
+    currencies: state.currency.currencies
+});
+
+export default connect(mapStateToProps, { getEthUsd })(Currencies);
