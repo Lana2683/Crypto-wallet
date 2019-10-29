@@ -9,7 +9,8 @@ import React, { Component } from 'react';
                 </label> 
                 <div className='toal-balance'>
                     <span className='toal-balance-sign'>$</span>
-                    {Math.random()}</div>
+                    {Math.random()}
+                </div>
                 <label className='label-total-balance' htmlFor='changes'>
                    24h Changes
                 </label> 
