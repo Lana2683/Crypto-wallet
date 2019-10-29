@@ -1,21 +1,19 @@
 import React, { Component } from 'react'
 
 class Test extends Component {
-    state = {
-        USD: ''
-    };
-
-    componentDidMount(){
-        fetch
-        ('https://min-api.cryptocompare.com/data/pricemulti?fsyms=ETH&tsyms=USD')
-        .then(response => response.json())
-        .then(data => 
-            // console.log(data)
-            this.setState({
-            USD: data.ETH.USD
-        })
-        )
-    }
+//     state = {
+//         USD: ''
+//     };
+//     componentDidMount(){
+//         fetch
+//         ('https://min-api.cryptocompare.com/data/pricemulti?fsyms=ETH&tsyms=USD')
+//         .then(response => response.json())
+//         .then(data => 
+//             this.setState({
+//             USD: data.ETH.USD
+//         })
+//         )
+//     }
 
     // componentWillMount(){
     //     console.log('componentWillMount...')
@@ -24,10 +22,10 @@ class Test extends Component {
     //     console.log('componentDidUpdate...')
     // }
     render() {
-        const { USD } = this.state;
+        // const { USD } = this.state;
         return (
             <div>
-                <h1>{ USD }</h1>
+                <h1>fff</h1>
             </div>
         )
     }

@@ -39,6 +39,48 @@
   justify-content: space-between;
 }
 
+.currency-group-inline {
+  display: flex;
+  margin-left: 53px;
+  width: 682px;
+  overflow-x: auto;
+  /* overflow-x: hidden;  */
+  /* flex-direction: row; */
+}
+
+.currency-group-inline::-webkit-scrollbar {
+  display: none;
+} 
+
+.block-inline {
+  height: 95px;
+  width: 375px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #494b56;
+  border-radius: 8px;
+  margin-left: 15px;
+}
+
+.svg-inline {
+  padding: 20px;
+}
+
+.currency-name-inline {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.random-inline {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
 .inline-block {
   display: flex;
 }
@@ -118,4 +160,9 @@ hr {
   background-color: #363845;
   color: white;
   padding-top: 58px;
+}
+
+.chart {
+  height: 958px;
+  margin-top: 84px;
 }

@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import Currency from './Currency';
 import Amound from './Amount';
 import { connect } from 'react-redux';
+import { getBtcUsd } from '../actions/currencyAction';
 import { getEthUsd } from '../actions/currencyAction';
+import { getEthXrp } from '../actions/currencyAction';
 import Search from '../SVG/Search';
 import Bell from '../SVG/Bell';
 
-
- class Currencies extends Component {
-    componentWillMount() {
-        this.props.getEthUsd();
-    };
+class Currencies extends Component {
+    
+    
     render() {
         const { currencies } = this.props
         return ( 
@@ -24,7 +24,6 @@ import Bell from '../SVG/Bell';
                     <Currency
                     key={currency.id}
                     currency={currency}
-                    updateData={this.updateData}
                     />
                 ))}
             </React.Fragment>
@@ -32,10 +31,15 @@ import Bell from '../SVG/Bell';
         )
         
     }
+    componentDidMount() {
+        this.props.getBtcUsd();
+        this.props.getEthUsd();
+        this.props.getEthXrp();
+    };
 }
 
 const mapStateToProps = (state) => ({
     currencies: state.currency.currencies
 });
 
-export default connect(mapStateToProps, { getEthUsd })(Currencies);
+export default connect(mapStateToProps, { getEthUsd, getBtcUsd, getEthXrp })(Currencies);
