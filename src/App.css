@@ -16,6 +16,12 @@
   margin-bottom: 40px;
 }
 
+.toal-balance-sign {
+  font-size: 34px;
+  padding-top: 14px;
+  padding-right: 10px;
+}
+
 .card {
   width: 686px;
   height: 248px;
@@ -93,6 +99,8 @@ hr {
 .toal-balance {
   font-size: 63px;
   margin-bottom: 26px;
+  display: flex;
+  justify-content: center;
 }
 
 .changes {
