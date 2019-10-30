@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
  class Amount extends Component {
     render() {
+        const {amount} = this.props;
+        const reducer = (accumulator, currentValue) => accumulator + currentValue;
         return (
             <div>
                 <label className='label-total-balance' htmlFor='total-balance'>
@@ -9,7 +11,7 @@ import React, { Component } from 'react';
                 </label> 
                 <div className='toal-balance'>
                     <span className='toal-balance-sign'>$</span>
-                    {Math.random()}
+                    {amount.reduce(reducer)}
                 </div>
                 <label className='label-total-balance' htmlFor='changes'>
                    24h Changes
@@ -20,4 +22,5 @@ import React, { Component } from 'react';
     }
 }
 
-export default Amount;
+export default  Amount;
+

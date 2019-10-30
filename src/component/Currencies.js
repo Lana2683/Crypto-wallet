@@ -22,7 +22,7 @@ class Currencies extends Component {
                     <Search />
                     <Bell />
                 </div>
-                <Amound />
+                <Amound amount={currencies.map(function(currency){return currency.sum*1})}/>
                 {currencies.map(currency => (
                     <Currency
                     key={currency.id}
