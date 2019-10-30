@@ -9,8 +9,11 @@ import Search from '../SVG/Search';
 import Bell from '../SVG/Bell';
 
 class Currencies extends Component {
-    
-    
+    componentDidMount() {
+        this.props.getBtcUsd();
+        this.props.getEthUsd();
+        this.props.getEthXrp();
+    };
     render() {
         const { currencies } = this.props
         return ( 
@@ -27,18 +30,12 @@ class Currencies extends Component {
                     />
                 ))}
             </React.Fragment>
-                 
+                
         )
-        
     }
-    componentDidMount() {
-        this.props.getBtcUsd();
-        this.props.getEthUsd();
-        this.props.getEthXrp();
-    };
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
     currencies: state.currency.currencies
 });
 

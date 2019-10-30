@@ -1,6 +1,4 @@
-import { GET_BTCUSD } from '../actions/types';
-import { GET_ETHUSD } from '../actions/types';
-import { GET_XRPUSD } from '../actions/types';
+import { GET_BTCUSD, GET_ETHUSD, GET_XRPUSD } from '../actions/types';
 import axios from 'axios';
 
 export const getBtcUsd = () => async dispatch => {

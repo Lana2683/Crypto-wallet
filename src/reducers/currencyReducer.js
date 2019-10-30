@@ -1,6 +1,4 @@
-import { GET_BTCUSD } from '../actions/types';
-import { GET_ETHUSD } from '../actions/types';
-import { GET_XRPUSD } from '../actions/types';
+import { GET_BTCUSD, GET_ETHUSD, GET_XRPUSD } from '../actions/types';
 import bitcoin from '../SVG/bitcoin.svg';
 import ethereum from '../SVG/ethereum.svg';
 import ripple from '../SVG/ripple.svg';
@@ -15,7 +13,6 @@ const initialState = {
             svg: bitcoin,
             profitLoss: '+2.75',
             rand: Math.random().toFixed(8),
-            // sum: ''
             selected: true
         },
         {
@@ -26,7 +23,6 @@ const initialState = {
             svg: ethereum,
             profitLoss:'-2.92',
             rand: Math.random().toFixed(8),
-            // sum: ''
             selected: false
         },
         {
@@ -37,7 +33,6 @@ const initialState = {
             svg: ripple,
             profitLoss: '+45.23',
             rand: Math.random().toFixed(8),
-            // sum: ''
             selected: false
         }
     ]
@@ -50,10 +45,11 @@ export default function(state = initialState, action) {
                 ...state,
                 currencies: state.currencies.map(
                     currency => {
-                            if(currency.id === 1){
-                            currency.USD = action.payload;
-                            }
-                            return currency
+                        if(currency.id === 1){
+                        currency.USD = action.payload;
+                        currency.sum = (action.payload*currency.rand).toFixed(2)
+                        }
+                        return currency
                     })
             }  
         case GET_ETHUSD:
@@ -61,10 +57,11 @@ export default function(state = initialState, action) {
                 ...state,
                 currencies: state.currencies.map(
                     currency => {
-                            if(currency.id === 2){
-                            currency.USD = action.payload;
-                            }
-                            return currency
+                        if(currency.id === 2){
+                        currency.USD = action.payload;
+                        currency.sum = (action.payload*currency.rand).toFixed(2)
+                        }
+                        return currency
                     })
         }
         case GET_XRPUSD:
@@ -72,13 +69,13 @@ export default function(state = initialState, action) {
             ...state,
             currencies: state.currencies.map(
                 currency => {
-                        if(currency.id === 3){
-                        currency.USD = action.payload;
-                        }
-                        return currency
+                    if(currency.id === 3){
+                    currency.USD = action.payload;
+                    currency.sum = (action.payload*currency.rand).toFixed(2)
+                    }
+                    return currency
                 })
         }
-        
         default:
             return state;
     }

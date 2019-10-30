@@ -31,8 +31,7 @@ class CurrencyPage extends Component {
     }
 
     render() { 
-        const { currencies, id } = this.props
-        console.log(id)
+        const { currencies } = this.props
         return (
             <div>
                 <div className='icons'>
