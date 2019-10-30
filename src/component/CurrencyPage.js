@@ -30,11 +30,16 @@ class CurrencyPage extends Component {
         })
     }
 
+    onclick () {
+        window.history.back();
+    }
+
     render() { 
         const { currencies } = this.props
+        
         return (
             <div>
-                <div className='icons'>
+                <div className='icons' onClick={(e) => this.onclick(e)}>
                     <Arrow />
                 </div>
                 <div className='currency-group-inline'>

@@ -14,6 +14,7 @@
   width: 616px;
   margin: auto;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .toal-balance-sign {
@@ -44,8 +45,6 @@
   margin-left: 53px;
   width: 682px;
   overflow-x: auto;
-  /* overflow-x: hidden;  */
-  /* flex-direction: row; */
 }
 
 .currency-group-inline::-webkit-scrollbar {

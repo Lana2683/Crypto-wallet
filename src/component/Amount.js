@@ -11,7 +11,7 @@ import React, { Component } from 'react';
                 </label> 
                 <div className='toal-balance'>
                     <span className='toal-balance-sign'>$</span>
-                    {amount.reduce(reducer)}
+                    {amount.reduce(reducer).toFixed(2)}
                 </div>
                 <label className='label-total-balance' htmlFor='changes'>
                    24h Changes
