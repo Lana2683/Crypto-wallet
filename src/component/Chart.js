@@ -30,7 +30,7 @@ class Chart extends Component {
                 </div>
             {showCurrencyByHour ? (<Line
             data={ {
-                labels: ['-4h', '-3h', '-2h', '-1h','now'],
+                labels: ['-12h','-11h','-10h','-9h','-8h','-7h','-6h','-5h','-4h', '-3h', '-2h', '-1h','now'],
                 datasets: [
                     {
                         data: arrCurrencyHour[0],
