@@ -1,19 +1,35 @@
-import { GET_BTCUSD, GET_ETHUSD, GET_XRPUSD } from '../actions/types';
+import { GET_BTCUSD, 
+         GET_ETHUSD, 
+         GET_XRPUSD,
+         GET_ELEMENT, 
+         GET_BTCBYHOUR, 
+         GET_BTCBYDAY,
+         GET_ETHBYHOUR, 
+         GET_ETHBYDAY,
+         GET_XRPBYHOUR, 
+         GET_XRPBYDAY 
+        } from '../actions/types';
 import bitcoin from '../SVG/bitcoin.svg';
 import ethereum from '../SVG/ethereum.svg';
 import ripple from '../SVG/ripple.svg';
 
 const initialState = {
+    btcByHours: [],
+    btcByDay: [],
+    ethByHours: [],
+    ethByDay: [],
+    xrpByHours: [],
+    xrpByDay: [],
     currencies: [
         {
             id: 1,
             USD: '',
-            name: 'BTN',
+            name: 'BTC',
             label: 'Bitcoin',
             svg: bitcoin,
-            profitLoss: '+2.75',
+            profitLoss: '+2.75%',
             rand: Math.random().toFixed(8),
-            selected: true
+            selected: false
         },
         {
             id: 2,
@@ -21,7 +37,7 @@ const initialState = {
             name: 'ETH',
             label: 'Ethereum',
             svg: ethereum,
-            profitLoss:'-2.92',
+            profitLoss:'+2.92%',
             rand: Math.random().toFixed(8),
             selected: false
         },
@@ -31,11 +47,12 @@ const initialState = {
             name: 'XRP',
             label: 'Ripple',
             svg: ripple,
-            profitLoss: '+45.23',
+            profitLoss: '+45.23%',
             rand: Math.random().toFixed(8),
             selected: false
         }
-    ]
+    ],
+    
 };
 
 export default function(state = initialState, action) {
@@ -75,6 +92,47 @@ export default function(state = initialState, action) {
                     }
                     return currency
                 })
+        }
+        case GET_ELEMENT:
+        return {
+            ...state,
+            currencies: state.currencies.map(
+                currency => {
+                    if(currency.id === action.payload){
+                    currency.selected = true;
+                    }
+                    return currency
+                })
+        }
+        case GET_BTCBYHOUR:
+        return {
+            ...state,
+            btcByHours: action.payload
+        }
+        case GET_BTCBYDAY:
+        return {
+            ...state,
+            btcByDay: action.payload
+        }
+        case GET_ETHBYHOUR:
+        return {
+            ...state,
+            ethByHours: action.payload
+        }
+        case GET_ETHBYDAY:
+        return {
+            ...state,
+            ethByDay: action.payload
+        }
+        case GET_XRPBYHOUR:
+        return {
+            ...state,
+            xrpByHours: action.payload
+        }
+        case GET_XRPBYDAY:
+        return {
+            ...state,
+            xrpByDay: action.payload
         }
         default:
             return state;

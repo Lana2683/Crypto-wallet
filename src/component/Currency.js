@@ -1,29 +1,37 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import {  getElement } from '../actions/currencyAction';
 
 class Currency extends Component {
+    
+    onClickSelect= id => {
+        this.props.getElement(id);
+    };
+
     render() {
-        const { id, name, USD, label, svg, profitLoss, rand, sum  } = this.props.currency;
+        const { id, name, USD, label, svg, profitLoss, rand, sum } = this.props.currency;
+        
         return (
             <div className='card'>
             <div className='block'>
+            <Link to={`/page/${id}`} className='link' onClick={()=> this.onClickSelect(id)} >
                 <span className='inline-block'>
-                    <img className='svg' src={svg} alt='img'/>
+                    <img className='svg' src={ svg } alt='img'/>
                     <div className='currency-name'>
-                        <Link to={`/page/${id}`}  index={id} className='link'>{ name }</Link>
+                        { name }
                          <label className='label-link' htmlFor='link'>{ label }
                         </label>
                     </div>
                 </span>
+            </Link>
                 <div className='random'>
                     { rand }
                     <label className='label-link' htmlFor='link'>
                         ${ sum }
                     </label>
                 </div>
-            </div>
-                
+            </div>    
             <hr/>
             <div className='block'>
                 <div className='currency-price'>$
@@ -44,10 +52,8 @@ class Currency extends Component {
     }
 }
 
-
 const mapStateToProps = state => ({
     currencies: state.currency.currencies
 });
 
-
-export default  connect(mapStateToProps, {})(Currency);
+export default  connect(mapStateToProps, { getElement })(Currency);

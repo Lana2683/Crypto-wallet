@@ -1,4 +1,14 @@
-import { GET_BTCUSD, GET_ETHUSD, GET_XRPUSD } from '../actions/types';
+import { GET_BTCUSD, 
+         GET_ETHUSD, 
+         GET_XRPUSD, 
+         GET_ELEMENT,
+         GET_BTCBYHOUR, 
+         GET_BTCBYDAY,
+         GET_ETHBYHOUR, 
+         GET_ETHBYDAY,
+         GET_XRPBYHOUR, 
+         GET_XRPBYDAY
+        } from '../actions/types';
 import axios from 'axios';
 
 export const getBtcUsd = () => async dispatch => {
@@ -19,7 +29,7 @@ export const getEthUsd = () => async dispatch => {
     
 }
 
-export const getEthXrp = () => async dispatch => {
+export const getXrpUsd = () => async dispatch => {
     const res = await axios.get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=XRP&tsyms=USD')
     dispatch({
         type:  GET_XRPUSD,
@@ -27,3 +37,59 @@ export const getEthXrp = () => async dispatch => {
     });
     
 }
+
+export const getElement = (id) => {
+    return {
+        type:  GET_ELEMENT,
+        payload: id
+    } 
+}
+
+export const getBtcByHour = () => async dispatch => {
+    const res = await axios.get('https://min-api.cryptocompare.com/data/v2/histohour?fsym=BTC&tsym=USD&limit=4')
+    dispatch({
+        type:  GET_BTCBYHOUR,
+        payload: res.data.Data.Data
+    });   
+}
+
+export const getBtcByDay = () => async dispatch => {
+    const res = await axios.get('https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym=USD&limit=6')
+    dispatch({
+        type:  GET_BTCBYDAY,
+        payload: res.data.Data.Data
+    });   
+}
+
+export const getEthByHour = () => async dispatch => {
+    const res = await axios.get('https://min-api.cryptocompare.com/data/v2/histohour?fsym=ETH&tsym=USD&limit=4')
+    dispatch({
+        type:  GET_ETHBYHOUR,
+        payload: res.data.Data.Data
+    });   
+}
+
+export const getEthByDay = () => async dispatch => {
+    const res = await axios.get('https://min-api.cryptocompare.com/data/v2/histoday?fsym=ETH&tsym=USD&limit=6')
+    dispatch({
+        type:  GET_ETHBYDAY,
+        payload: res.data.Data.Data
+    });   
+}
+
+export const getXrpByHour = () => async dispatch => {
+    const res = await axios.get('https://min-api.cryptocompare.com/data/v2/histohour?fsym=XRP&tsym=USD&limit=4')
+    dispatch({
+        type:  GET_XRPBYHOUR,
+        payload: res.data.Data.Data
+    });   
+}
+
+export const getXrpByDay = () => async dispatch => {
+    const res = await axios.get('https://min-api.cryptocompare.com/data/v2/histoday?fsym=XRP&tsym=USD&limit=6')
+    dispatch({
+        type:  GET_XRPBYDAY,
+        payload: res.data.Data.Data
+    });   
+}
+

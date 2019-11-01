@@ -1,3 +1,10 @@
 export const GET_ETHUSD = 'GET_ETHUSD';
 export const GET_BTCUSD = 'GET_BTCUSD';
 export const GET_XRPUSD = 'GET_XRPUSD';
+export const GET_ELEMENT = 'GET_ELEMENT';
+export const GET_BTCBYHOUR  = 'GET_BTCBYHOUR';
+export const GET_BTCBYDAY  = 'GET_BTCBYDAY';
+export const GET_ETHBYHOUR  = 'GET_ETHBYHOUR';
+export const GET_ETHBYDAY  = 'GET_ETHBYDAY';
+export const GET_XRPBYHOUR  = 'GET_XRPBYHOUR';
+export const GET_XRPBYDAY  = 'GET_XRPBYDAY';

@@ -4,16 +4,18 @@ import Amound from './Amount';
 import { connect } from 'react-redux';
 import { getBtcUsd } from '../actions/currencyAction';
 import { getEthUsd } from '../actions/currencyAction';
-import { getEthXrp } from '../actions/currencyAction';
+import { getXrpUsd } from '../actions/currencyAction';
 import Search from '../SVG/Search';
 import Bell from '../SVG/Bell';
 
 class Currencies extends Component {
+
     componentDidMount() {
         this.props.getBtcUsd();
         this.props.getEthUsd();
-        this.props.getEthXrp();
+        this.props.getXrpUsd();
     };
+    
     render() {
         const { currencies } = this.props
         return ( 
@@ -39,4 +41,4 @@ const mapStateToProps = state => ({
     currencies: state.currency.currencies
 });
 
-export default connect(mapStateToProps, { getEthUsd, getBtcUsd, getEthXrp })(Currencies);
+export default connect(mapStateToProps, { getEthUsd, getBtcUsd, getXrpUsd })(Currencies);

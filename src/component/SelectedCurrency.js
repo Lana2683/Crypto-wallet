@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
 
-class CurrencyInline extends Component {
+class SelectedCurrency extends Component {
     render() {
-        const { name, label, svg, profitLoss, rand, selected } = this.props.currency;
+        const { name, label, svg, profitLoss, rand } = this.props.currency;
         return (
-                <div  className={selected ? 'block-inline-selected' : 'block-inline'}> 
+                <div className='block-selected'>
                     <span className='inline-block'>
-                        <img className='svg-inline' src={svg} alt='img' />
-                        <div className='currency-name-inline'>
+                        <img className='svg-selected' src={svg} alt='img' />
+                        <div className='currency-name-selected'>
                             <div className='link'>{ name }</div>
                             <label className='label-link' htmlFor='link'>{ label }
                             </label>
@@ -25,4 +24,4 @@ class CurrencyInline extends Component {
     }
 }
 
-export default  connect(null, {})(CurrencyInline);
+export default SelectedCurrency
