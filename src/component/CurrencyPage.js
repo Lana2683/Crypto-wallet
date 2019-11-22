@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Arrow from '../SVG/Arrow';
 import CurrencyInline from '../component/CurrencyInline';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {  getBtcByHour, 
           getBtcByDay,
@@ -56,9 +57,9 @@ class CurrencyPage extends Component {
 
         return (
             <div>
-                <div className='icons' onClick={(e) => this.onclick(e)}>
+                <Link to={'/'} className='icons'>
                     <Arrow />
-                </div>
+                </Link>
                 <div className='currency-group-inline'>
                     {currencies.map(currency => (
                         <CurrencyInline

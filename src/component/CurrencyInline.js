@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import '../css/Currency.css';
+
 class CurrencyInline extends Component {
     render() {
         const { name, label, svg, profitLoss, rand, selected } = this.props.currency;
@@ -10,15 +12,15 @@ class CurrencyInline extends Component {
                         <img className='svg-inline' src={svg} alt='img' />
                         <div className='currency-name-inline'>
                             <div className='link'>{ name }</div>
-                            <label className='label-link' htmlFor='link'>{ label }
-                            </label>
+                            <span className='label-link'>{ label }
+                            </span>
                         </div>
                     </span>
                     <div className='random-inline'>
                         { rand }
-                        <label className='label-link-profit-loss' htmlFor='link'>
+                        <span className='label-link-profit-loss'>
                             { profitLoss }
-                        </label>
+                        </span>
                     </div>
                 </div>
             )

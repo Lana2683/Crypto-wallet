@@ -1,0 +1,24 @@
+.toal-balance-sign {
+    font-size: 34px;
+    padding-top: 14px;
+    padding-right: 10px;
+  }
+  
+.toal-balance {
+    font-size: 63px;
+    margin-bottom: 26px;
+    display: flex;
+    justify-content: center;
+  }
+  
+.changes {
+    font-size: 28px;
+    color: #0fdb86;
+    margin-bottom: 49px;
+    margin-top: 10px;
+    }
+
+.label-total-balance {
+    color: #96969e;
+    font-size: 28px;
+  }

@@ -15,7 +15,7 @@ function App() {
         <div className="App">
           <Switch>
             <Route exact path='/' component={Currencies} />
-            <Route exact path='/page/:id' component={CurrencyPage}/>
+            <Route exact path='/page/:id' component={CurrencyPage} />
           </Switch>
         </div>
       </Router>

@@ -1,0 +1,59 @@
+.card {
+    width: 686px;
+    height: 248px;
+    background: linear-gradient(-45deg, #3b3b47, #444351);
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    margin-bottom: 28px;
+  }
+  
+  .block {
+    height: 120px;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .inline-block {
+    display: flex;
+  }
+  
+  .random {
+    padding: 38px 39px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+
+  .svg {
+    margin-top: 20px;
+    padding: 19px 27px 0px 39px
+  }
+
+  .profit-loss {
+    padding: 20px 39px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    color: #0fdb86;
+  }
+  
+  .currency-name{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-top: 38px;
+  }
+  
+  .currency-price {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 18px 0px 32px 39px; 
+  }
+  .label-link {
+    color: #96969e;
+    font-size: 20px;
+  }
+    

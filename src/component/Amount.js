@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import '../css/Amount.css';
+
  class Amount extends Component {
     render() {
         const {amount} = this.props;
@@ -7,16 +9,16 @@ import React, { Component } from 'react';
         const changes = '+ $37.55 ↑' 
         return (
             <div>
-                <label className='label-total-balance' htmlFor='total-balance'>
+                <span className='label-total-balance'>
                    Your total balance
-                </label> 
+                </span> 
                 <div className='toal-balance'>
                     <span className='toal-balance-sign'>$</span>
                     { amount.reduce(reducer).toFixed(2) }
                 </div>
-                <label className='label-total-balance' htmlFor='changes'>
+                <span className='label-total-balance'>
                    24h Changes
-                </label> 
+                </span> 
                 <div className='changes'>{ changes }</div>
             </div>
         )

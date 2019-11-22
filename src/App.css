@@ -8,22 +8,22 @@
   padding-top: 58px;
 }
 
-.icons {
+/* .icons {
   display: flex;
   justify-content: space-between;
   width: 616px;
   margin: auto;
   margin-bottom: 40px;
   cursor: pointer;
-}
+} */
 
-.toal-balance-sign {
+/* .toal-balance-sign {
   font-size: 34px;
   padding-top: 14px;
   padding-right: 10px;
-}
+} */
 
-.card {
+/* .card {
   width: 686px;
   height: 248px;
   background: linear-gradient(-45deg, #3b3b47, #444351);
@@ -38,7 +38,7 @@
   font-size: 30px;
   display: flex;
   justify-content: space-between;
-}
+} */
 
 .currency-group-inline {
   display: flex;
@@ -92,7 +92,7 @@
   text-align: right;
 }
 
-.inline-block {
+/* .inline-block {
   display: flex;
 }
 
@@ -101,15 +101,15 @@
   display: flex;
   flex-direction: column;
   text-align: right;
-}
+} */
 
-.profit-loss {
+/* .profit-loss {
   padding: 20px 39px 0px 0px;
   display: flex;
   flex-direction: column;
   text-align: right;
   color: #0fdb86;
-}
+} */
 
 .link {
   color: white;
@@ -122,12 +122,12 @@ hr {
   width: 609px;
 }
 
-.svg {
+/* .svg {
   margin-top: 20px;
   padding: 19px 27px 0px 39px
-}
+} */
 
-.currency-name{
+/* .currency-name{
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -139,18 +139,18 @@ hr {
   flex-direction: column;
   text-align: left;
   padding: 18px 0px 32px 39px; 
-}
+} */
 
-.label-total-balance {
+/* .label-total-balance {
   color: #96969e;
   font-size: 28px;
-}
+} */
 
-.label-link {
+/* .label-link {
   color: #96969e;
   font-size: 20px;
-}
-
+} */
+/* 
 .toal-balance {
   font-size: 63px;
   margin-bottom: 26px;
@@ -163,7 +163,7 @@ hr {
   color: #0fdb86;
   margin-bottom: 49px;
   margin-top: 10px;
-}
+} */
 
 .currency-page {
   text-align: center;

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {  getElement } from '../actions/currencyAction';
 
+import '../css/Currency.css';
+
 class Currency extends Component {
     
     onClickSelect= id => {
@@ -20,30 +22,30 @@ class Currency extends Component {
                     <img className='svg' src={ svg } alt='img'/>
                     <div className='currency-name'>
                         { name }
-                         <label className='label-link' htmlFor='link'>{ label }
-                        </label>
+                         <span className='label-link'>{ label }
+                        </span>
                     </div>
                 </span>
             </Link>
                 <div className='random'>
                     { rand }
-                    <label className='label-link' htmlFor='link'>
+                    <span className='label-link'>
                         ${ sum }
-                    </label>
+                    </span>
                 </div>
             </div>    
             <hr/>
             <div className='block'>
                 <div className='currency-price'>$
                     { USD }
-                    <label className='label-link' htmlFor='currency-price'>Price
-                    </label>
+                    <span className='label-link'>Price
+                    </span>
                 </div>
                 <div>
                     <div className='profit-loss'>
                         {profitLoss}
-                        <label className='label-link' htmlFor='profit-loss'>Profit/Loss
-                        </label>
+                        <span className='label-link'>Profit/Loss
+                        </span>
                     </div>
                 </div>
             </div>

@@ -8,6 +8,8 @@ import { getXrpUsd } from '../actions/currencyAction';
 import Search from '../SVG/Search';
 import Bell from '../SVG/Bell';
 
+import '../css/Currencies.css';
+
 class Currencies extends Component {
 
     componentDidMount() {
