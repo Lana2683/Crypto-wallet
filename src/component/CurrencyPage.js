@@ -15,10 +15,6 @@ import SelectedCurrency from '../component/SelectedCurrency';
 import '../css/CurrencyPage.css';
 
 class CurrencyPage extends Component {
-    // onclick () {
-    //     document.location.href='http://localhost:3000';
-    // }
-   
     componentDidMount() {
         this.props.getBtcByHour();
         this.props.getBtcByDay();
@@ -26,6 +22,9 @@ class CurrencyPage extends Component {
         this.props.getEthByDay();
         this.props.getXrpByHour(); 
         this.props.getXrpByDay();
+        // const { id } = this.props.match.params;
+        // this.props.getElement(id);
+        // console.log(id)
     };
     
     render() { 
@@ -97,4 +96,5 @@ const mapStateToProps = (state) => ({
     xrpByDay: state.currency.xrpByDay
 });
 
-export default connect(mapStateToProps, { getBtcByHour, getBtcByDay, getEthByHour, getEthByDay, getXrpByHour, getXrpByDay })( CurrencyPage );
+export default connect(mapStateToProps, {getBtcByHour, getBtcByDay, getEthByHour, getEthByDay, getXrpByHour, getXrpByDay
+ })( CurrencyPage );

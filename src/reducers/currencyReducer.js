@@ -64,6 +64,7 @@ export default function(state = initialState, action) {
                     currency => {
                         if(currency.id === 1){
                         currency.USD = action.payload;
+                        currency.selected = false;
                         currency.sum = (action.payload*currency.rand).toFixed(2)
                         }
                         return currency
@@ -76,6 +77,7 @@ export default function(state = initialState, action) {
                     currency => {
                         if(currency.id === 2){
                         currency.USD = action.payload;
+                        currency.selected = false;
                         currency.sum = (action.payload*currency.rand).toFixed(2)
                         }
                         return currency
@@ -88,6 +90,7 @@ export default function(state = initialState, action) {
                 currency => {
                     if(currency.id === 3){
                     currency.USD = action.payload;
+                    currency.selected = false;
                     currency.sum = (action.payload*currency.rand).toFixed(2)
                     }
                     return currency

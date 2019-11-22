@@ -17,7 +17,9 @@ class Currency extends Component {
         return (
             <div className='card'>
             <div className='block'>
-            <Link to={`/page/${id}`} className='link' onClick={()=> this.onClickSelect(id)} >
+            <Link to={`/page/${id}`} className='link' 
+            onClick={()=> this.onClickSelect(id)} 
+            >
                 <span className='inline-block'>
                     <img className='svg' src={ svg } alt='img'/>
                     <div className='currency-name'>
