@@ -1,10 +1,4 @@
-.toal-balance-sign {
-    font-size: 34px;
-    padding-top: 14px;
-    padding-right: 10px;
-  }
-  
-.toal-balance {
+ .toal-balance {
     font-size: 63px;
     margin-bottom: 26px;
     display: flex;
@@ -22,3 +16,10 @@
     color: #96969e;
     font-size: 28px;
   }
+
+.toal-balance-sign {
+    font-size: 34px;
+    padding-top: 14px;
+    padding-right: 10px;
+  }
+ 

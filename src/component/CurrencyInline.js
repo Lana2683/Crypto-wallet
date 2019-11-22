@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import '../css/Currency.css';
+import '../css/CurrencyInline.css';
 
 class CurrencyInline extends Component {
     render() {

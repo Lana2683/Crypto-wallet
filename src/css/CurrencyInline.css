@@ -1,0 +1,51 @@
+.link {
+    color: white;
+    text-decoration: none;
+  }
+
+.block-inline {
+    height: 95px;
+    width: 375px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #494b56;
+    border-radius: 8px;
+    margin-left: 15px;
+  }
+
+.inline-block {
+    display: flex;
+  }
+
+.label-link {
+    color: #96969e;
+    font-size: 20px;
+  }
+  
+.block-inline-selected {
+    height: 95px;
+    width: 375px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #494b56;
+    border: 2px solid #494b56;
+    border-radius: 8px;
+    margin-left: 15px;
+  }
+  
+.svg-inline {
+    padding: 20px;
+  }
+
+.currency-name-inline {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+.label-link-profit-loss {
+    color: #0fdb86;
+    font-size: 20px;
+  }

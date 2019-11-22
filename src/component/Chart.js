@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Line, defaults } from 'react-chartjs-2';
 
+import '../css/Chart.css';
+
 defaults.global.defaultFontSize=20;
 defaults.global.defaultFontColor='white'
 

@@ -1,0 +1,19 @@
+.icons {
+    display: flex;
+    justify-content: space-between;
+    width: 616px;
+    margin: auto;
+    margin-bottom: 40px;
+    cursor: pointer;
+  }
+
+.currency-group-inline {
+    display: flex;
+    margin-left: 53px;
+    width: 682px;
+    overflow-x: auto;
+  }
+  
+.currency-group-inline::-webkit-scrollbar {
+    display: none;
+  }

@@ -10,12 +10,14 @@ import {  getBtcByHour,
           getXrpByHour, 
           getXrpByDay } from '../actions/currencyAction';
 import Chart from './Chart';
-import SelectedCurrency from '../component/SelectedCurrency'
+import SelectedCurrency from '../component/SelectedCurrency';
+
+import '../css/CurrencyPage.css';
 
 class CurrencyPage extends Component {
-    onclick () {
-        document.location.href='http://localhost:3000';
-    }
+    // onclick () {
+    //     document.location.href='http://localhost:3000';
+    // }
    
     componentDidMount() {
         this.props.getBtcByHour();

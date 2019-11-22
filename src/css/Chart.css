@@ -1,0 +1,31 @@
+.show-charts {
+    display: flex;
+    margin-left: 63px;
+    margin-bottom: 38px;
+  }
+  
+.show-chart {
+    cursor: pointer;
+    height: 40px;
+    width: 123px;
+    font-size: 24px;
+    text-align: center;
+    color: #888890;
+    padding-top: 4px;
+  }
+  
+.shown-chart {
+    cursor: pointer;
+    height: 40px;
+    width: 123px;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 4px;
+    background-color: #444450;
+    border-radius: 8px;
+  }
+  
+.chart {
+    height: 958px;
+    margin-top: 68px;
+  }
