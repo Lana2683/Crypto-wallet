@@ -110,32 +110,32 @@ export default function(state = initialState, action) {
         case GET_BTCBYHOUR:
         return {
             ...state,
-            btcByHours: action.payload
+            btcByHours: action.payload.map(btc => {return btc.close})
         }
         case GET_BTCBYDAY:
         return {
             ...state,
-            btcByDay: action.payload
+            btcByDay: action.payload.map(btc => {return btc.close})
         }
         case GET_ETHBYHOUR:
         return {
             ...state,
-            ethByHours: action.payload
+            ethByHours: action.payload.map(eth => {return eth.close})
         }
         case GET_ETHBYDAY:
         return {
             ...state,
-            ethByDay: action.payload
+            ethByDay: action.payload.map(eth => {return eth.close})
         }
         case GET_XRPBYHOUR:
         return {
             ...state,
-            xrpByHours: action.payload
+            xrpByHours: action.payload.map(xrp => {return xrp.close})
         }
         case GET_XRPBYDAY:
         return {
             ...state,
-            xrpByDay: action.payload
+            xrpByDay: action.payload.map(xrp => {return xrp.close})
         }
         default:
             return state;

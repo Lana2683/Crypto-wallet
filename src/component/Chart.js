@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import { Line, defaults } from 'react-chartjs-2';
+import ChartDays from './ChartDays';
+import ChartHours from './ChartHours';
 
 import '../css/Chart.css';
 
-defaults.global.defaultFontSize=20;
-defaults.global.defaultFontColor='white'
-
 class Chart extends Component {
+
     state = {
         showCurrencyByHour: true,
         showCurrencyByDay: false
       };
+
     render() {
-        const { arrCurrencyHour, arrCurrencyDay }=this.props;
-        const { showCurrencyByHour, showCurrencyByDay } = this.state;
+        const { currency } = this.props
+        const { showCurrencyByHour, showCurrencyByDay} = this.state;
+
         return (
             <div className='chart'>
                 <div className='show-charts'>
@@ -30,52 +31,11 @@ class Chart extends Component {
                         Week
                     </div>
                 </div>
-            {showCurrencyByHour ? (<Line
-            data={ {
-                labels: ['-12h','-11h','-10h','-9h','-8h','-7h','-6h','-5h','-4h', '-3h', '-2h', '-1h','now'],
-                datasets: [
-                    {
-                        data: arrCurrencyHour[0],
-                        backgroundColor:'rgba(159,114,255,0.1)',
-                        borderColor: 'rgb(159,114,255)',
-                        lineTension: 0
-                    }
-                ]
-            }          
-            }
-            
-            options={{
-                legend:{
-                   display: false,  
-               }
-             }}
-                height={400}
-                />) : null}
-                 {showCurrencyByDay ? (<Line
-            data={ {
-                labels: ['-6d', '-5d', '-4d', '-3d','-2d','-1d','today'],
-                datasets: [
-                    {
-                        data: arrCurrencyDay[0],
-                        backgroundColor:'rgba(159,114,255,0.1)',
-                        borderColor: 'rgb(159,114,255)',
-                        lineTension: 0
-                    }
-                ]
-            }          
-            }
-            
-            options={{
-                legend:{
-                   display: false,  
-               }
-             }}
-                height={400}
-                />
-                ) : null}
+            {showCurrencyByHour ? (<ChartHours id={currency.id}/>) : null}
+            {showCurrencyByDay ? (<ChartDays id={currency.id}/>) : null}
             </div>
         )
     }
 }
 
-export default Chart; 
+export default Chart ;

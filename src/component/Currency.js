@@ -7,7 +7,7 @@ import '../css/Currency.css';
 
 class Currency extends Component {
     
-    onClickSelect= id => {
+    onClickSelect = id => {
         this.props.getElement(id);
     };
 
