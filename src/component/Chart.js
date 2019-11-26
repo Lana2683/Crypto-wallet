@@ -5,7 +5,6 @@ import ChartHours from './ChartHours';
 import '../css/Chart.css';
 
 class Chart extends Component {
-
     state = {
         showCurrencyByHour: true,
         showCurrencyByDay: false
@@ -13,7 +12,7 @@ class Chart extends Component {
 
     render() {
         const { currency } = this.props
-        const { showCurrencyByHour, showCurrencyByDay} = this.state;
+        const { showCurrencyByHour, showCurrencyByDay } = this.state;
 
         return (
             <div className='chart'>

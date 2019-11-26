@@ -3,10 +3,12 @@ import React, { Component } from 'react';
 import '../css/Amount.css';
 
  class Amount extends Component {
+
     render() {
         const {amount} = this.props;
         const reducer = (accumulator, currentValue) => accumulator + currentValue;
         const changes = '+ $37.55 ↑' 
+        
         return (
             <div>
                 <span className='label-total-balance'>

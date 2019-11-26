@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import {  getElement } from '../actions/currencyAction';
 
 import '../css/Currency.css';
 
 class Currency extends Component {
-    
-    onClickSelect = id => {
-        this.props.getElement(id);
-    };
 
     render() {
         const { id, name, USD, label, svg, profitLoss, rand, sum } = this.props.currency;
@@ -17,9 +12,7 @@ class Currency extends Component {
         return (
             <div className='card'>
             <div className='block'>
-            <Link to={`/page/${id}`} className='link' 
-            onClick={()=> this.onClickSelect(id)} 
-            >
+            <Link to={`/page/${id}`} className='link'>
                 <span className='inline-block'>
                     <img className='svg' src={ svg } alt='img'/>
                     <div className='currency-name'>
@@ -60,4 +53,4 @@ const mapStateToProps = state => ({
     currencies: state.currency.currencies
 });
 
-export default  connect(mapStateToProps, { getElement })(Currency);
+export default  connect(mapStateToProps, { })(Currency);

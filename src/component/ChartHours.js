@@ -19,6 +19,7 @@ class ChartHours extends Component {
     render() {
         const { id, btcByHours, ethByHours, xrpByHours} = this.props;
         let arrCurrencyHour = [];
+
             if(id === 1){
                 arrCurrencyHour = btcByHours
             }
@@ -28,6 +29,7 @@ class ChartHours extends Component {
             if(id === 3){
                arrCurrencyHour = xrpByHours
             }
+            
         return (
         <Line
             data={ {

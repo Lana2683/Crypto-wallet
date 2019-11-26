@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Currency from './Currency';
 import Amound from './Amount';
 import { connect } from 'react-redux';
-import { getBtcUsd } from '../actions/currencyAction';
-import { getEthUsd } from '../actions/currencyAction';
-import { getXrpUsd } from '../actions/currencyAction';
+import { getBtcUsd, 
+         getEthUsd, 
+         getXrpUsd } from '../actions/currencyAction';
 import Search from '../SVG/Search';
 import Bell from '../SVG/Bell';
 
@@ -20,13 +20,14 @@ class Currencies extends Component {
     
     render() {
         const { currencies } = this.props
+
         return ( 
             <React.Fragment>
                 <div className='icons'>
                     <Search />
                     <Bell />
                 </div>
-                <Amound amount={currencies.map(function(currency){return currency.sum*1})}/>
+                <Amound amount={currencies.map(function(currency){return parseInt(currency.sum)})}/>
                 {currencies.map(currency => (
                     <Currency
                     key={currency.id}

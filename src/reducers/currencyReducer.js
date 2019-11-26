@@ -101,7 +101,7 @@ export default function(state = initialState, action) {
             ...state,
             currencies: state.currencies.map(
                 currency => {
-                    if(currency.id === action.payload){
+                    if(currency.id === parseInt(action.payload)){
                     currency.selected = true;
                     }
                     return currency

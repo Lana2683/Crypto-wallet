@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 import '../css/SelectedCurrency.css';
 
 class SelectedCurrency extends Component {
+
     render() {
         const { name, label, svg, profitLoss, rand } = this.props.currency;
+        
         return (
                 <div className='block-selected'>
                     <span className='inline-block'>

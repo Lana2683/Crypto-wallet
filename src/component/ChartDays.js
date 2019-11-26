@@ -19,6 +19,7 @@ class ChartDays extends Component {
     render() {
         const { id, btcByDay, ethByDay, xrpByDay } = this.props;
         let arrCurrencyDay = [] ;
+
         if(id === 1){ 
             arrCurrencyDay = btcByDay
             }
@@ -28,6 +29,7 @@ class ChartDays extends Component {
         if(id === 3){
              arrCurrencyDay = xrpByDay
             } 
+            
         return (
         <Line
             data={ {
