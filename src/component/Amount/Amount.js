@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import '../css/Amount.css';
+import './Amount.css';
 
- class Amount extends Component {
+class Amount extends Component {
 
     render() {
         const {amount} = this.props;

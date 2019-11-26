@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Arrow from '../SVG/Arrow';
-import CurrencyInline from '../component/CurrencyInline';
+import Arrow from '../../SVG/Arrow';
+import CurrencyInline from '../CurrencyInline/CurrencyInline';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import {  getElement } from '../actions/currencyAction';
-import Chart from './Chart';
-import SelectedCurrency from '../component/SelectedCurrency';
+import {  getElement } from '../../actions/currencyAction';
+import Chart from '../Chart/Chart';
+import SelectedCurrency from '../SelectedCurrency/SelectedCurrency';
 
-import '../css/CurrencyPage.css';
+import './CurrencyPage.css';
 
 class CurrencyPage extends Component {
 

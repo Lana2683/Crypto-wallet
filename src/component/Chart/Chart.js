@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import ChartDays from './ChartDays';
-import ChartHours from './ChartHours';
+import ChartDays from '../ChartDays/ChartDays';
+import ChartHours from '../ChartHours/ChartHours';
 
-import '../css/Chart.css';
+import './Chart.css';
 
 class Chart extends Component {
     state = {

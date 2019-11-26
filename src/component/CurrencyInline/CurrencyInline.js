@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../css/CurrencyInline.css';
+import './CurrencyInline.css';
 
 class CurrencyInline extends Component {
     

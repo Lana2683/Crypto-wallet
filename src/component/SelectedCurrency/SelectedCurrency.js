@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../css/SelectedCurrency.css';
+import './SelectedCurrency.css';
 
 class SelectedCurrency extends Component {
 

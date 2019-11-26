@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Currencies from './component/Currencies';
-import CurrencyPage from './component/CurrencyPage';
+import Currencies from './component/Currencies/Currencies';
+import CurrencyPage from './component/CurrencyPage/CurrencyPage';
 
 import { Provider } from 'react-redux';
 import store from './store'

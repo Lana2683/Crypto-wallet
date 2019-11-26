@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import Currency from './Currency';
-import Amound from './Amount';
+import Currency from '../Currency/Currency';
+import Amound from '../Amount/Amount';
 import { connect } from 'react-redux';
 import { getBtcUsd, 
          getEthUsd, 
-         getXrpUsd } from '../actions/currencyAction';
-import Search from '../SVG/Search';
-import Bell from '../SVG/Bell';
+         getXrpUsd } from '../../actions/currencyAction';
+import Search from '../../SVG/Search';
+import Bell from '../../SVG/Bell';
 
-import '../css/Currencies.css';
+import './Currencies.css';
 
 class Currencies extends Component {
 

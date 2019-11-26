@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Line, defaults } from 'react-chartjs-2';
 import { getBtcByDay,
          getEthByDay,
-         getXrpByDay } from '../actions/currencyAction';
+         getXrpByDay } from '../../actions/currencyAction';
 
 defaults.global.defaultFontSize=20;
 defaults.global.defaultFontColor='white'
