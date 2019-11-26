@@ -11,32 +11,22 @@ defaults.global.defaultFontColor='white'
 class ChartDays extends Component {
 
     componentDidMount() {
-        this.props.getBtcByDay();
-        this.props.getEthByDay();
-        this.props.getXrpByDay();
+        const id = this.props.id;
+        this.props.getBtcByDay(id);
+        this.props.getEthByDay(id);
+        this.props.getXrpByDay(id);
     };
 
     render() {
-        const { id, btcByDay, ethByDay, xrpByDay } = this.props;
-        let arrCurrencyDay = [] ;
-
-        if(id === 1){ 
-            arrCurrencyDay = btcByDay
-            }
-        if(id === 2){
-            arrCurrencyDay = ethByDay
-            }
-        if(id === 3){
-             arrCurrencyDay = xrpByDay
-            } 
-            
+        const { crnByDay } = this.props;
+    
         return (
         <Line
             data={ {
                 labels: ['-6d', '-5d', '-4d', '-3d','-2d','-1d','today'],
                 datasets: [
                     {
-                        data: arrCurrencyDay,
+                        data: crnByDay,
                         backgroundColor:'rgba(159,114,255,0.1)',
                         borderColor: 'rgb(159,114,255)',
                         lineTension: 0
@@ -57,9 +47,7 @@ class ChartDays extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    btcByDay: state.currency.btcByDay,
-    ethByDay: state.currency.ethByDay,
-    xrpByDay: state.currency.xrpByDay
+    crnByDay: state.currency.crnByDay,
 });
 
 export default connect(mapStateToProps, { getBtcByDay, getEthByDay, getXrpByDay

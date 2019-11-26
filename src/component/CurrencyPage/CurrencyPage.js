@@ -18,7 +18,6 @@ class CurrencyPage extends Component {
 
     render() { 
         const { currencies } = this.props;
-        const selectedCurrency = currencies.filter(currency => (currency.selected)?currency:null)
         
         return (
             <div>
@@ -34,19 +33,28 @@ class CurrencyPage extends Component {
                     ))}
                 </div>
                 <div className='currency-group'>
-                {selectedCurrency.map(currency => (
-                        <SelectedCurrency
-                        key={currency.id}
-                        currency={currency}
-                        />
-                    ))}
+                {currencies.map(currency => 
+                     {
+                        if(currency.selected === true){
+                            return <SelectedCurrency
+                            key={currency.id}
+                            currency={currency}
+                            />
+                        }
+                        return null
+                    })
+                }
                 </div>
-                {selectedCurrency.map(currency => (
-                        <Chart
-                        key={currency.id}
-                        currency={currency}
-                        />
-                    ))}
+                {currencies.map(currency => 
+                     {
+                        if(currency.selected === true){
+                            return <Chart
+                            key={currency.id}
+                            currency={currency}
+                            />
+                        }
+                        return null
+                    })}
             </div>
         )
     }

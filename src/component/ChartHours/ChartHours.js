@@ -11,32 +11,22 @@ defaults.global.defaultFontColor='white'
 class ChartHours extends Component {
 
     componentDidMount() {
-        this.props.getBtcByHour();
-        this.props.getEthByHour(); 
-        this.props.getXrpByHour(); 
+        const id = this.props.id;
+        this.props.getBtcByHour(id);
+        this.props.getEthByHour(id); 
+        this.props.getXrpByHour(id); 
     };
 
     render() {
-        const { id, btcByHours, ethByHours, xrpByHours} = this.props;
-        let arrCurrencyHour = [];
+        const {  crnByHours } = this.props;
 
-            if(id === 1){
-                arrCurrencyHour = btcByHours
-            }
-            if(id === 2){
-               arrCurrencyHour = ethByHours
-            }
-            if(id === 3){
-               arrCurrencyHour = xrpByHours
-            }
-            
         return (
         <Line
             data={ {
                 labels: ['-12h','-11h','-10h','-9h','-8h','-7h','-6h','-5h','-4h', '-3h', '-2h', '-1h','now'],
                 datasets: [
                     {
-                        data: arrCurrencyHour,
+                        data: crnByHours,
                         backgroundColor:'rgba(159,114,255,0.1)',
                         borderColor: 'rgb(159,114,255)',
                         lineTension: 0
@@ -57,9 +47,7 @@ class ChartHours extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    btcByHours: state.currency.btcByHours,
-    ethByHours: state.currency.ethByHours,
-    xrpByHours: state.currency.xrpByHours
+    crnByHours: state.currency.crnByHours,
 });
 
 export default connect(mapStateToProps, {getBtcByHour, getEthByHour, getXrpByHour

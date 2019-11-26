@@ -7,19 +7,15 @@ import { GET_BTCUSD,
          GET_ETHBYHOUR, 
          GET_ETHBYDAY,
          GET_XRPBYHOUR, 
-         GET_XRPBYDAY 
+         GET_XRPBYDAY,
         } from '../actions/types';
 import bitcoin from '../SVG/bitcoin.svg';
 import ethereum from '../SVG/ethereum.svg';
 import ripple from '../SVG/ripple.svg';
 
 const initialState = {
-    btcByHours: [],
-    btcByDay: [],
-    ethByHours: [],
-    ethByDay: [],
-    xrpByHours: [],
-    xrpByDay: [],
+    crnByHours: [],
+    crnByDay: [],
     currencies: [
         {
             id: 1,
@@ -110,32 +106,32 @@ export default function(state = initialState, action) {
         case GET_BTCBYHOUR:
         return {
             ...state,
-            btcByHours: action.payload.map(btc => {return btc.close})
+            crnByHours: action.payload.map(btc => {return btc.close})
         }
         case GET_BTCBYDAY:
         return {
             ...state,
-            btcByDay: action.payload.map(btc => {return btc.close})
+            crnByDay: action.payload.map(btc => {return btc.close})
         }
         case GET_ETHBYHOUR:
         return {
             ...state,
-            ethByHours: action.payload.map(eth => {return eth.close})
+            crnByHours: action.payload.map(eth => {return eth.close})
         }
         case GET_ETHBYDAY:
         return {
             ...state,
-            ethByDay: action.payload.map(eth => {return eth.close})
+            crnByDay: action.payload.map(eth => {return eth.close})
         }
         case GET_XRPBYHOUR:
         return {
             ...state,
-            xrpByHours: action.payload.map(xrp => {return xrp.close})
+            crnByHours: action.payload.map(xrp => {return xrp.close})
         }
         case GET_XRPBYDAY:
         return {
             ...state,
-            xrpByDay: action.payload.map(xrp => {return xrp.close})
+            crnByDay: action.payload.map(xrp => {return xrp.close})
         }
         default:
             return state;
